@@ -8,7 +8,7 @@ function App() {
       <Avatar />
       <div className="data">
         <Intro />
-        <Skill-list />
+        <SkilllList />
       </div>
     </div>
   );
@@ -28,15 +28,21 @@ function Intro() {
     </div>
   );
 }
-function Skillset() {
+function SkillList() {
   return (
     <div>
-      <skill />
+      <Skill skill = "HTML + CSS" emoji = "👍🏻" color = "orange" />
+      <Skill skill = "Angular" emoji = "👍🏻" color = "red" />
+      <Skill skill = "ReactJS" emoji = "👍🏻" color = "blue" />
+      <Skill skill = "TailwindCSS" emoji = "👍🏻" color = "purple" />
     </div>
   );
 }
-function skill(props) {
-  <div className="skill"></div>;
+function Skill(props) {
+  <div className="skill" style = {{backgroundColor: props.color}}>
+    <span>{props.skill}</span>
+    <span>{props.emoji}</span>
+    </div>;
 }
 
 const rootElement = document.getElementById("root");
